@@ -15,6 +15,34 @@
     {
       "nome": "MySQL",
       "id": 4
+    },
+    {
+      "nome": "C#",
+      "id": 5
+    },
+    {
+      "nome": "Bootstrap4",
+      "id": 6
+    },
+    {
+      "nome": "PHP",
+      "id": 7
+    },
+    {
+      "nome": "HTML e CSS",
+      "id": 8
+    },
+    {
+      "nome": "ASP.Net",
+      "id": 9
+    },
+    {
+      "nome": "Typescript",
+      "id": 10
+    },
+    {
+      "nome": "Javascript",
+      "id": 11
     }
   ]
 }

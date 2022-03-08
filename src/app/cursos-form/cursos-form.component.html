@@ -1,0 +1,17 @@
+<form class="row g-3 needs-validation" novalidate [formGroup]="form" style="padding-top: 10px;">
+
+  <div class="col-md-4">
+    <label for="nome" class="form-label">Nome do Curso</label>
+    <input type="text" class="form-control" id="nome" placeholder="Nome do curso" formControlName="nome" [ngClass]="{ 'is-invalid': sumitted && hasError('nome')}"/>
+
+    <div class="invalid-feedback" *ngIf="hasError('nome')">
+      Por favor, informe um nome para o curso
+    </div>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+    <button type="button" class="btn btn-default" (click)="onCancel()">Cancelar</button>
+  </div>
+</form>
+
