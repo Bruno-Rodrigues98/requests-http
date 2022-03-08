@@ -5,7 +5,7 @@
     </div>
     <div class="float-right">
       <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Curso</button>
-      <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button>
+      <button type="button" class="btn btn-secondary" (click)="onRefresh()" >Atualizar</button>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
           <td>{{ curso.nome }}</td>
           <td>
             <span class="float-right">
-              <button class="btn btn-outline-warning mb-1 btn-sm">
+              <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(curso.id)">
                 Atualizar
               </button>
 

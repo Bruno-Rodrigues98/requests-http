@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { AlertModalService } from './../shared/alert-model.service';
 import { CursosService } from './../cursos.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,10 +15,23 @@ export class CursosFormComponent implements OnInit {
   form: FormGroup;
   sumitted = false;
 
-  constructor(private fb: FormBuilder, private service: CursosService,
-    private modal: AlertModalService, private location: Location) { }
+  constructor(private fb: FormBuilder,
+    private service: CursosService,
+    private modal: AlertModalService,
+    private location: Location,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.route.params.subscribe(
+      (params: any)=>{
+        const id = params['id'];
+        console.log(id);
+        const curso = this.service.loadByID(id)
+      }
+    )
+
+
 
     this.form = this.fb.group({
       nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]

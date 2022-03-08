@@ -43,6 +43,14 @@
     {
       "nome": "Javascript",
       "id": 11
+    },
+    {
+      "nome": "Nodejs",
+      "id": 12
+    },
+    {
+      "nome": "PHP",
+      "id": 13
     }
   ]
 }
