@@ -4,6 +4,7 @@ import { CursosService } from './../cursos.service';
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
+import { map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-cursos-form',
@@ -23,20 +24,42 @@ export class CursosFormComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.route.params.subscribe(
+    /*this.route.params.subscribe(
       (params: any)=>{
         const id = params['id'];
         console.log(id);
-        const curso = this.service.loadByID(id)
+        const curso$ = this.service.loadByID(id);
+        curso$.subscribe(curso =>{
+          this.updateForm(curso);
+        });
+
       }
-    )
+    )*/
 
+      /* this.route.params
+     .pipe(
+       map((params: any) => params['id']),
+       switchMap(id => this.service.loadByID(id)),
+      // switchMap(cursos => obterAulas)
+     )
+     .subscribe(curso => this.updateForm(curso));*/
 
+     const curso = this.route.snapshot.data['curso'];
 
     this.form = this.fb.group({
-      nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]
+      id: [curso.id],
+      nome: [curso.nome, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]
     })
   }
+
+
+   /*updateForm(curso: any) {
+     this.form.patchValue({
+      id: curso.id,
+       nome: curso.nome
+     });
+   }*/
+
 
   hasError(field: string){
 
