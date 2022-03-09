@@ -2,11 +2,11 @@
   "cursos": [
     {
       "id": 1,
-      "nome": "Angular"
+      "nome": "Angular16"
     },
     {
-      "nome": ".NET",
-      "id": 2
+      "id": 2,
+      "nome": ".NET6"
     },
     {
       "nome": "Java",
@@ -37,24 +37,8 @@
       "id": 9
     },
     {
-      "nome": "Typescript",
-      "id": 10
-    },
-    {
-      "nome": "Javascript",
-      "id": 11
-    },
-    {
-      "nome": "Nodejs",
-      "id": 12
-    },
-    {
-      "id": 13,
-      "nome": "Flexbox and Grid"
-    },
-    {
-      "id": 14,
-      "nome": "Windows"
+      "id": 10,
+      "nome": "Ruby"
     }
   ]
 }

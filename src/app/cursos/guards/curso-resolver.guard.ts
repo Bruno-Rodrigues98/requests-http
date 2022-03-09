@@ -23,5 +23,6 @@ export class CursoResolverGuard implements Resolve<Curso>{
       nome: ""
     });
 
+
 }
 }
