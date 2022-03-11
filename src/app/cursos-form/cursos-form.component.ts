@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 import { map, switchMap } from 'rxjs';
+import { Cursos2Service } from '../cursos/cursos2.service';
 
 @Component({
   selector: 'app-cursos-form',
@@ -17,7 +18,7 @@ export class CursosFormComponent implements OnInit {
   sumitted = false;
 
   constructor(private fb: FormBuilder,
-    private service: CursosService,
+    private service: Cursos2Service,
     private modal: AlertModalService,
     private location: Location,
     private route: ActivatedRoute) { }
